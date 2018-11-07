@@ -1,0 +1,65 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.About>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+        height: 300px; 
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+</head>
+<body>
+
+<div class="row">
+    <div class="column" style="background-color:#6FB7BA;border: solid 2px white; ">
+        <h2>Vision</h2>
+        <p style="color:white; font-size:12px;">An individual who meets one of the following criteria:
+has been laid off or terminated, or received notice of termination or lay off and is unlikely to return to previous industry of occupation,
+has been terminated or laid off, or has received a notice of termination or lay off, as a result of permanent closure of, or substantial layoff at a plant or facility,
+was self-employed and now unemployed because of a natural disaster,
+was self-employed (including farmer, rancher, or fisherman), but is unemployed as a result of general economic conditions in the community in which he or she resides or because of a natural disaster, or
+is a displaced homemaker.
+See also displaced worker.
+
+Read more: http://www.businessdictionary.com/definition/dislocated-worker.html</p>
+    </div>
+    <div class="column" style="background-color:#A3DADD;border: solid 2px white;">
+        <h2>People</h2>
+        <p style="color:white; font-size:12px;">But is it how people really text?
+
+While I believe that understanding a full sentence lays the foundation of understanding, the way people interact with a bot can vary from one full sentence to groups of snippets, rectifying typos or even changing their mind.
+
+The way most bots are built is to process every input to trigger another question or action within the same experience.
+
+If you are a conversational developer, you are probably familiar with how a message is received from the user, processed and sent back. Without going too deep in technical terms, all messaging platforms allow the developer to receive the content of each message (via a webhook).</p>
+    </div>
+    <div class="column" style="background-color:#6FB7BA;border: solid 2px white;">
+        <h2>Skills</h2>
+        <p style="color:white; font-size:12px;">Skills are the expertise or talent needed in order to do a job or task. Job skills allow you to do a particular job and life skills help you through everyday tasks. There are many different types of skills that can help you succeed at all aspects of your life whether it's school, work, or even a sport or hobby.
+
+Skills are what makes you confident and independent in life and are essential for success. It might take determination and practice, but almost any skill can be learned or improved. Set yourself realistic expectations and goals, get organized and get learning.</p>
+    </div>
+</div>
+
+</body>
+</html>

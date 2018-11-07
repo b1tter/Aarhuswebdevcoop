@@ -1,0 +1,53 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+@{
+    var selection = Model.Content.Site().Children()
+                        .Where(x => x.IsVisible());
+}
+                    
+                                              
+    <header class="masthead">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h1>Aarhus Web Development</h1>
+                        <span class="subheading">A site that shares projects and articles</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>         
+        <div class="container">
+            <div class="row">
+                <h1 style="text-align: center; padding-bottom: 50px;">All Projects</h1>
+                @Umbraco.RenderMacro("Projects")
+            </div>
+        </div>
+        <div class="container" style="margin-top: 5%;">
+            <div class="row">
+                <h1 style="text-align: center; padding-bottom: 50px;">Our Articles</h1>
+                @Umbraco.RenderMacro("Articles", new { nrOfArticles = 3 });
+            </div>
+        </div>
+        
+        <div class="container" style="margin-top: 5%;">
+            <div class="row">
+                <h1 style="text-align: center; padding-bottom: 50px;">Active Members</h1>
+                @Umbraco.RenderMacro("Members")
+            </div>
+        </div>
+        
+        <div class="container" style="margin-top: 5%;">
+            <div class="row">
+                <h1 style="text-align: center; padding-bottom: 50px;">Prospect Members</h1>
+                @Umbraco.RenderMacro("MembersP")
+            </div>
+        </div>
+
+                                                 

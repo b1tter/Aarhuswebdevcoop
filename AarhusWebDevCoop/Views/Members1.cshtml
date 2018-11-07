@@ -1,0 +1,20 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Members>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<div class="container" style="margin-top: 5%;">
+            <div class="row">
+                <h1 style="text-align: center; padding-bottom: 50px;">Active Members</h1>
+                @Umbraco.RenderMacro("Members")
+            </div>
+        </div>
+        
+        <div class="container" style="margin-top: 5%;">
+            <div class="row">
+                <h1 style="text-align: center; padding-bottom: 50px;">Prospect Members</h1>
+                @Umbraco.RenderMacro("MembersP")
+            </div>
+        </div>
+        }
